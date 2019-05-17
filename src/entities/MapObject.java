@@ -89,7 +89,7 @@ public class MapObject {
 		public void calculateCorners(double x, double y) {
 			
 			int leftTile = (int)(x - cwidth / 2) / tileSize;
-			int rightTile = (int)(x + cwidth / 2 - 1) / tileSize;
+			int rightTile = (int)(x + cwidth / 2 -1) / tileSize;
 			int topTile = (int)(y - cheight / 2) / tileSize;
 			int bottomTile = (int)(y + cheight / 2 - 1) / tileSize;
 			
@@ -117,7 +117,7 @@ public class MapObject {
 			
 			currCol = (int)x / tileSize;
 			currRow = (int)y / tileSize;
-			
+			//System.out.println("currcol "+currCol+" currRow "+currRow);
 			xdest = x + dx;
 			ydest = y + dy;
 			

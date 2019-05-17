@@ -17,7 +17,7 @@ public class Player extends MapObject {
 	private ArrayList<Image[]> sprites;
 	private final int[] numFrames = { 1, 2, 1, 1 };
 
-	// animation actions
+	// animation actions static not use when use player more than 1  
 	private static final int IDLE = 0;
 	private static final int WALKING = 1;
 	private static final int JUMPING = 2;

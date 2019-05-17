@@ -63,7 +63,8 @@ public class TileMap {
 			xmax = 0;
 			ymin = GameView.HEIGHT - height;
 			ymax = 0;
-
+			//System.out.println(GameView.WIDTH+" "+width);
+			//System.out.println("x "+xmin+" "+xmax);
 			for (int row = 0; row < numRows; row++) {
 				String line = Map.mapData[row];
 				for (int col = 0; col < numCols; col++) {
@@ -97,8 +98,9 @@ public class TileMap {
 
 	public void setPosition(double x, double y) {
 
-		this.x += (x - this.x) ;
-		this.y += (y - this.y) ;
+		this.x = x ;
+		this.y = y ;
+		System.out.println("setposition"+x+" "+y+" "+this.x+" "+this.y);
 
 		fixBounds();
 
@@ -174,7 +176,7 @@ public class TileMap {
 				}
 				Image pic = new Image(picpath, tileSize, tileSize, false, true);
 				
-				gc.drawImage(pic, tileSize *( i-colOffset-0.5), tileSize * (j-rowOffset));
+				gc.drawImage(pic, tileSize *( i-colOffset)-0.5, tileSize * (j-rowOffset));
 			}
 		}
 	}
